@@ -1,0 +1,93 @@
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#box {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    width: 340px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+#box2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#box2 label {
+    font-size: 0.9rem;
+    color: #a5a5a5;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#num {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    text-align: right;
+    box-sizing: border-box;
+    background-color: #1c1c1e;
+    color: white;
+}
+
+/* ⚡ सबसे महत्वपूर्ण: यह बटनों को 4 कॉलम के परफेक्ट ग्रिड में सेट करेगा */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 कॉलम का लेआउट */
+    gap: 12px; /* बटनों के बीच की दूरी */
+}
+
+/* सभी बटनों का बेसिक स्टाइल */
+.btn {
+    background-color: #333333;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 50%; /* बटनों को पूरी तरह गोल करने के लिए */
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.btn:active {
+    filter: brightness(1.3);
+}
+
+/* AC बटन के लिए ग्रे कलर */
+.btn.action {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+/* +, -, *, /, % बटनों के लिए ऑरेंज कलर */
+.btn.operator {
+    background-color: #ff9f0a;
+    color: white;
+}
+
+/* = बटन के लिए विशेष स्टाइल (यह 2 कॉलम की जगह घेरेगा) */
+.btn.equal {
+    background-color: #ff9f0a;
+    color: white;
+    grid-column: span 2; /* दो बटन जितनी चौड़ाई */
+    border-radius: 30px; /* थोडा लम्बा गोल आकार */
+    width: 100%;
+}
